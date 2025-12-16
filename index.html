@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="header">
+            <h1>Панель управления</h1>
+            <div class="controls">
+                <button class="btn btn-primary" id="exportBtn">
+                    <span class="btn-icon">📤</span> Экспорт
+                </button>
+                <label for="importFile" class="btn btn-success">
+                    <span class="btn-icon">📥</span> Импорт
+                </label>
+                <input type="file" id="importFile" accept=".json" style="display: none;">
+                <button class="btn btn-primary" id="addBtn">
+                    <span class="btn-icon">➕</span> Добавить виджет
+                </button>
+                <button class="btn btn-secondary" id="refreshBtn">
+                    <span class="btn-icon">🔄</span> Обновить все
+                </button>
+            </div>
+        </div>
+        
+        <div class="matrix" id="matrix">
+            <!-- Карточки будут добавлены через JavaScript -->
+        </div>
+    </div>
+
+    <!-- Модальное окно выбора виджетов -->
+    <div id="widgetModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Выберите виджет</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="widgets-grid" id="widgetsGrid">
+                    <!-- Виджеты будут добавлены через JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно настроек виджета -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="settingsTitle">Настройки виджета</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="settingsContent">
+                    <!-- Настройки будут добавлены через JavaScript -->
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" id="saveSettings">Сохранить</button>
+                    <button class="btn btn-secondary" id="cancelSettings">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
